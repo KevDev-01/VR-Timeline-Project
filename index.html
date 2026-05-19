@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>VR Timeline</title>
+      <!-- Load A-Frame -->
+      <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+   </head>
+   <body>
+      <a-scene>
+         <!-- Assets -->
+         <a-assets>
+            <img id="skyTexture" src="panoramic-view-sea.jpg">
+         </a-assets>
+         <!-- Sky background -->
+         <a-sky src="#skyTexture"></a-sky>
+         <!-- Camera + WASD + mouse look -->
+         <a-entity camera wasd-controls look-controls position="0 1.6 5"></a-entity>
+         <!-- Ground plane -->
+         <a-plane position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4"></a-plane>
+         <!-- Timeline axis: anchored at stereoscope, extends forward -->
+         <a-cylinder 
+            id="timelineAxis"
+            radius="0.2" 
+            height="200" 
+            rotation="90 0 0" 
+            color="red"
+            position="0 0 -100">
+         </a-cylinder>
+         <!-- Stereoscope Model -->
+         <a-entity id="stereoscopeModel" 
+            gltf-model="Stereoscope/Stereoscope.gltf" 
+            position="0 1 -2" 
+            scale="3 3 3">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="Holmes Stereoscope (1861)" 
+            position="0 4 -13" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Invented by Oliver Wendell Holmes, described as a &quot;mirror with a memory&quot;
+            Introduced the idea of &quot;form-print&quot; (images experienced with solid 3D forms)
+            Supported the empiricist stance in 19th-century science and philosophy
+            " 
+            position="4 2 -13" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!--View-Master Model-->
+         <a-entity obj-model="obj: url(Viewmaster Final/model_1.obj)"
+            material="src: url(Viewmaster Final/standardSurface1_albedo.png)"
+            position="0 0.3 -25"
+            scale="0.4 0.4 0.4">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="View-Master (1939)" 
+            position="0 4 -25" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Invented by William Gruber and sold by Sawyer’s Inc.
+            Used rotating reels of stereoscopic color photographs to simulate immersive 3D scenes
+            Marketed as &quot;virtual travel&quot; and accessible to the public" 
+            position="4 2 -25" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: From scientific exploration of human visual perception (Holmes Stereoscope) to the mass production of immersive entertainment (View-Master)" 
+            position="-4 2 -25" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!--Sensorama Model-->
+         <a-entity gltf-model="sensorama_machine/scene.gltf"
+            position="0 0.3 -50"
+            scale="1.2 1.2 1.2"
+            rotation="0 90 0">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="Sensorama (1956)" 
+            position="0 4 -50" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Invented by Morton Heilig as one of the first multisensory virtual-reality devices
+            Combined 3D film, stereo sound, vibrations and even scent to simulate real-world experiences such as riding a motorcycle
+            Served as a precursor to 4DX and IMAX cinematic technologies, as well as motion simulators and multisensory theme-park rides" 
+            position="4 2 -50" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: From visual experiences (Viewmaster) through optical illusions to multisensory experiences (Sensorama)." 
+            position="-4 2 -50" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!--Nintendo Virtual Boy Model-->
+         <a-entity gltf-model="obj: url(virtual+boy.glb)"
+            position="2.2 0.2 -72"
+            scale="1 1 1"
+            rotation="0 90 0">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="Nintendo Virtual Boy (1995)" 
+            position="0 4 -75" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Invented by Gunpei Yokoi and release by Nintendo as the first portable video game console marketed as &quot;virtual reality&quot;
+            Used binocular head-mounted display with red LED graphics to add stereoscopic depth
+            It was a commercial failure but demonstrated the potential of consumer VR
+            " 
+            position="4 2 -75" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: From experimental cinema in arcade-like booth (Sensorama) to a portable device for consumer gaming 
+            (Nintendo Virtual Boy)" 
+            position="-4 2 -75" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!--Google Cardboard Model-->
+         <a-entity obj-model="obj: url(Google cardboard/model_1.obj)"
+            material="src: url(Google cardboard/karton.png)"
+            position="0 0.3 -100" 
+            scale="1 1 1"
+            rotation="0 0 0">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="Google Cardboard (2014)" 
+            position="0 4 -100" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Developed by Google as a low-cost DIY VR viewer made of cardboard, lenses and a phone
+            Made to democratize access to VR, enabling immersive 360 degree experiences for anyone with minimal hardware
+            Served as precursor to modern mainstream commercial VR headsets (Oculus Rift, HTC Vive, Meta Quest etc.)"
+            position="4 2 -100" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: from a proprietary, flawed gaming console (Nintendo Virtual Boy) to an open-source VR experience using a mobile device 
+            (Google Cardboard)" 
+            position="-4 2 -100" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- HTC Vive Model -->
+         <a-entity obj-model="obj: url(htc-vive/source/V3/V3.obj)"
+            material="src: url(htc-vive/source/textures/base.png);"
+            position="0 1.6 -125"
+            scale="0.5 0.5 0.5"
+            rotation="0 0 0">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="HTC Vive (2016)" 
+            position="0 4 -125" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Developed through a collaboration between HTC and Valve
+            Allowed for room-scale VR: external sensors that emit IR lasers tracked user movement in a physical space
+            First commercial VR headset that delivered true physical immersion rather than seated VR"
+            position="4 2 -125" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: from mobile, phone-based viewing (Google Cardboard) to full-body, room-scale immersion with precise spatial tracking (HTC Vive)" 
+            position="-4 2 -125" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Oculus Quest Model -->
+         <a-entity gltf-model="oculus_quest_vr_headset/scene.gltf"
+            position="0 1.4 -150"
+            scale="27 27 27"
+            rotation="0 0 0">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="Oculus Quest (2019)" 
+            position="0 4 -150" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="First ever standalone, wireless VR headset, without requiring a PC or external sensors
+            Integrated tracking through onboard cameras
+            Made high-quality VR portable and widely available"
+            position="4 2 -150" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: from VR as a setup (HTC Vive) to a portable, standalone device (Oculus Quest)" 
+            position="-4 2 -150" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Meta Quest Pro -->
+         <a-entity gltf-model="meta_quest_pro_headset/scene.gltf"
+            position="0 1.4 -175"
+            scale="26 26 26"
+            rotation="-25 0 0">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="Meta Quest Pro (2022)" 
+            position="0 4 -175" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.5 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Introduced mixed-reality capabilities, blending virtual-reality with passthrough augmented-reality
+            Made for productivity
+            Shifted VR from purely gaming toward collaborative, professional, and creative uses"
+            position="4 2 -175" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: from a consumer-focused VR gaming device (Quest) to a mixed-reality headset designed for productivity (Quest Pro)" 
+            position="-4 2 -175" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Apple Vision Pro -->
+         <a-entity gltf-model="apple_vision_pro/scene.gltf"
+            position="0 1.4 -200"
+            scale="28 28 28"
+            rotation="0 -90 0">
+         </a-entity>
+         <!-- Label -->
+         <a-text value="Apple Vision Pro (2024)" 
+            position="0 4 -200" 
+            align="center" 
+            side="double" 
+            color="#000" 
+            width="8"
+            scale="1.5 1.6 1.5"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
+         </a-text>
+         <!--Caption-->
+         <a-text value="Transformed mixed-reality into spatial computing, where digital content interacts seamlessly with the user’s physical environment
+            Uses reality itself as the interface, anchoring simulated objects to certain places in the physical world and allows for user inputs through gaze, motion and voice
+            Designed for everyday use, much like a mobile phone and effectively upgrades human vision, hence the name &quot;Vision Pro&quot;
+            "
+            position="4 2 -200" 
+            align="left" 
+            rotation="0 -20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+         <!-- Evolution -->
+         <a-text value="Evolution: from productivity use cases using headset-based immersion (Meta Quest Pro) to everyday interaction through environment integrated computing using reality itself as the interface (Apple Vision Pro)" 
+            position="-4 2 -200" 
+            align="right" 
+            rotation="0 20 0"
+            side="double" 
+            color="#000" 
+            width="8">
+         </a-text>
+      </a-scene>
+   </body>
+</html>

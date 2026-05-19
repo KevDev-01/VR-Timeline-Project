@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sensorama Machine
+* source:	https://sketchfab.com/3d-models/sensorama-machine-36cf4acf4a31434098f0d2ff03deeb88
+* author:	planemovisual (https://sketchfab.com/planemovisual)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sensorama Machine" (https://sketchfab.com/3d-models/sensorama-machine-36cf4acf4a31434098f0d2ff03deeb88) by planemovisual (https://sketchfab.com/planemovisual) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
